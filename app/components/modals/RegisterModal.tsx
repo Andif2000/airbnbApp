@@ -7,6 +7,7 @@ import { useCallback, useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 import useRegisterModal from '@/app/hooks/useRegisterModal'
 import Modal from './Modal'
+import Heading from '../Heading'
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal()
@@ -39,14 +40,25 @@ const RegisterModal = () => {
         setIsLoading(false)
       })
   }
+
+  const bodyContent = (
+    <div className="flex flex-col ga4">
+      <Heading 
+      title='Welcome to Airbnb'
+      subtitle='Create an Account'/>
+    </div>
+  )
+
   return (
     <Modal
-    disabled={isLoading}
-    isOpen={registerModal.isOpen}
-    title='Register'
-    actionLabel='Continue'
-    onClose={registerModal.onClose}
-    onSubmit={handleSubmit(onSumbit)}/>
+      disabled={isLoading}
+      isOpen={registerModal.isOpen}
+      title="Register"
+      actionLabel="Continue"
+      onClose={registerModal.onClose}
+      onSubmit={handleSubmit(onSumbit)}
+      body={bodyContent}
+    />
   )
 }
 export default RegisterModal
