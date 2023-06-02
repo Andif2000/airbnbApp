@@ -39,7 +39,7 @@ const Input: React.FC<InputProps> = ({
         placeholder=" "
         type={type}
         className={`
-        peer w-full my-2 p-4 pt-6 font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed
+        peer w-full mt-2 p-4 pt-6 font-light bg-white border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed
         ${formatPrice ? 'pl-9' : 'pl-4'}
         ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
         ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
@@ -47,7 +47,7 @@ const Input: React.FC<InputProps> = ({
       />
       <label
         className={`
-        absolute text-md duration-150 transform -translate-y-3 top-5 z-10 origin-[0]
+        absolute text-md duration-150 transform -translate-y-3 top-6 z-10 origin-[0]
         ${formatPrice ? 'left-9' : 'left-4'}
         peer-placeholder-shown:scale-100
         peer-placeholder-shown:translate-y-0
